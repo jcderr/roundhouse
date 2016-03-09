@@ -12,15 +12,15 @@ module Clockwork
         Dog.emit_point("sidekiq.queues.#{queue}.size", size)
       end
 
-      Dog.emit_points('sidekiq.failed', stats.failed)
-      Dog.emit_points('sidekiq.enqueued', stats.enqueued)
-      Dog.emit_points('sidekiq.processed', stats.processed)
+      Dog.emit_point('sidekiq.failed', stats.failed)
+      Dog.emit_point('sidekiq.enqueued', stats.enqueued)
+      Dog.emit_point('sidekiq.processed', stats.processed)
 
-      Dog.emit_points('sidekiq.processes_size', stats.processes_size)
-      Dog.emit_points('sidekiq.scheduled_size', stats.scheduled_size)
-      Dog.emit_points('sidekiq.retry_size', stats.retry_size)
-      Dog.emit_points('sidekiq.dead_size', stats.dead_size)
-      Dog.emit_points('sidekiq.workers_size', stats.workers_size)
+      Dog.emit_point('sidekiq.processes_size', stats.processes_size)
+      Dog.emit_point('sidekiq.scheduled_size', stats.scheduled_size)
+      Dog.emit_point('sidekiq.retry_size', stats.retry_size)
+      Dog.emit_point('sidekiq.dead_size', stats.dead_size)
+      Dog.emit_point('sidekiq.workers_size', stats.workers_size)
     end
   end
 
