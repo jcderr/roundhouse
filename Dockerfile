@@ -13,4 +13,7 @@ RUN bundle install
 
 COPY . /app
 
+# Nothing required, but required to deploy
+EXPOSE 80
+
 CMD bundle exec clockwork clock.rb
